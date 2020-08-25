@@ -20,8 +20,8 @@ let
     jupyter.jupyterlabWith {
       kernels = [ ihaskellWithPackages ];
       directory = jupyter.mkDirectoryWith {
-        extensions = [
-        ihaskell_labextension
+        extensionsLocal = [
+          ihaskell_labextension
         ];
       };
     };

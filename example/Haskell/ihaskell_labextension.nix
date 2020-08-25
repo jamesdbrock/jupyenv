@@ -11,4 +11,4 @@ let
     sha256 = "157mqfprjbjal5mvrqwpgnfvc93fn1pqwwkhfpcs7jm5c34bkv3q";
   };
 in
-  jupyter.mkBuildExtension "${ihaskellSrc}/ihaskell_labextension"
+  "${ihaskellSrc}/ihaskell_labextension"
