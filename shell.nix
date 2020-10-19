@@ -32,9 +32,9 @@ let
           "jupyterlab-system-monitor@0.6.0"
         ];
       };
-      extraPackages = p: [ nbresuse ];
+      extraPackages = p: [ nbresuse pkgs.python3Packages.psutil ];
       extraInputsFrom = _: [ nbresuse ];
-      extraJupyterPath = _: "${nbresuse}/lib/python3.8/site-packages";
+      extraJupyterPath = _: "${nbresuse}/lib/python3.7/site-packages:${pkgs.python3Packages.psutil}/lib/python3.7/site-packages";
     };
 in
   jupyterEnvironment.env
